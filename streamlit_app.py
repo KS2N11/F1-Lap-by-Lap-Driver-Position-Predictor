@@ -115,8 +115,8 @@ with st.sidebar:
 
   #Creating a Dataframe
   circuit_id = circuits.loc[circuits['name'] == circuit, 'circuitId'].iloc[0]
-  driver_id = drivers.loc[drivers['driverRef'] == driver_name, 'driverId'].iloc[0]
-  constructor_id = constructors.loc[constructors['name'] == constructor_name, 'constructorId'].iloc[0]
+  driver_id = drivers.loc[drivers['driverRef'] == driver, 'driverId'].iloc[0]
+  constructor_id = constructors.loc[constructors['name'] == constructor, 'constructorId'].iloc[0]
   race_id = races.loc[(races['circuitId']==circuit_id), 'raceId'].iloc[0]
   round = races.loc[(races['circuitId'] == circuit_id), 'round'].iloc[0]
 
