@@ -90,7 +90,8 @@ y_pred = regressor.predict(X_test)
 r = r2_score(y_test, y_pred)
 
 driver_names = drivers['driverRef']
-x = driver_names.values.tolist()
+driver_names = driver_names.values.tolist()
+driver_names = tuple(driver_names)
 
 with st.sidebar:
   st.header('**Input Features**')
