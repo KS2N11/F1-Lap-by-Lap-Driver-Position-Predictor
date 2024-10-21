@@ -100,6 +100,7 @@ constructor_names = tuple(constructor_names)
 with st.sidebar:
   st.header('**Input Features**')
   driver = st.selectbox('Driver Name', driver_names)
+  constructor = st.selectbox('Constructor Name', constructor_names)
 
 
 
