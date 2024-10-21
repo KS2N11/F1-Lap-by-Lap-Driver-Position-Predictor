@@ -177,4 +177,4 @@ output = int(output)
 output = str(output)
 
 st.write('**Position of**', driver, '**from**', constructor, '**is P**',output)
-print("Lap Time- ", minutes,":",seconds,".", milliseconds)
+st.write("Lap Time- ", minutes,":",seconds,".", milliseconds)
