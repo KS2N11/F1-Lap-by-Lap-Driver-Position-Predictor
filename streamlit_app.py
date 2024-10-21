@@ -9,9 +9,7 @@ from sklearn.metrics import r2_score
 st.markdown(
     """
     <style>
-    [data-testid="stAppViewContainer"] {
-        background-color: #0b0c10;
-    }
+    
     [data-testid="stHeader"] {
         background: rgba(0, 0, 0, 0);
     }
