@@ -120,6 +120,8 @@ with st.expander('✅Prepared Data'):
   d9 = dataset.head(1000)
   d9
 
+with st.expander('👀Data Visualizations'):
+
 
 #Model 1
 X = dataset.drop(columns = ['driver_curr_pos'], axis = 0)
