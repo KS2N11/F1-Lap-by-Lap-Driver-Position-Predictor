@@ -17,7 +17,7 @@ results = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-Dr
 
 with st.expander('Raw Data'):
   st.write('**Driver Info**')
-  drivers.head(1000)
+  drivers.head()
   st.write('**Driver Standings**')
   driver_standings.head(1000)
   st.write('**Constructor Info**')
