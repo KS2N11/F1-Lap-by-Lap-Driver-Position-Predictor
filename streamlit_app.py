@@ -150,9 +150,11 @@ with st.sidebar:
     }
   )
 
-
-output = regressor.predict(input_data1)
-output = output[0]
+if(cuurent_lap == 60):
+  output = final_pos
+else:
+  output = regressor.predict(input_data1)
+  output = output[0]
 
 input_data2 = pd.DataFrame(
     {
