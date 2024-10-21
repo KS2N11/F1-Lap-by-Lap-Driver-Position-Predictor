@@ -150,7 +150,6 @@ with st.sidebar:
     }
   )
 
-input_data1
 
 output = regressor.predict(input_data1)
 output = output[0]
@@ -163,7 +162,6 @@ input_data2 = pd.DataFrame(
         'driver_curr_pos': [output]
     }
   )
-input_data2
 
 output2 = regressor2.predict(input_data2)
 output2 = output2[0]
