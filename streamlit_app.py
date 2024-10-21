@@ -102,7 +102,8 @@ regressor2.fit(X2_train, y2_train)
 
 y2_pred = regressor2.predict(X2_test)
 r2 = r2_score(y2_test, y2_pred)
-r2
+
+
 
 circuit_names = circuits['name']
 circuit_names = circuit_names.values.tolist()
@@ -135,7 +136,7 @@ with st.sidebar:
   race_id = races.loc[(races['circuitId']==circuit_id), 'raceId'].iloc[0]
   round = races.loc[(races['circuitId'] == circuit_id), 'round'].iloc[0]
 
-  input_data = pd.DataFrame(
+  input_data1 = pd.DataFrame(
     {
         'circuitId': [circuit_id],
         'raceId': [race_id],
@@ -149,10 +150,22 @@ with st.sidebar:
     }
   )
 
+input_data1
 
-input_data
-output = regressor.predict(input_data)
+output = regressor.predict(input_data1)
 output = output[0]
+
+input_data2 = pd.DataFrame(
+    {
+        'raceId': [race_id],
+        'driverId': [driver_id],
+        'curr_lap': [current_lap],
+        'driver_curr_pos': [output]
+    }
+  )
+input_data2
+
 output = int(output)
 output = str(output)
+
 st.write('**Position of**', driver, '**from**', constructor, '**is P**',output)
