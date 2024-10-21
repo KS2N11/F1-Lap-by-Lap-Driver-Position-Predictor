@@ -89,7 +89,7 @@ regressor.fit(X_train, y_train)
 
 y_pred = regressor.predict(X_test)
 
-r = r2_score(y_test, y_pred)
+r1 = r2_score(y_test, y_pred)
 
 #Model 2
 X2 = lap_times.drop(columns = ['milliseconds', 'curr_lap_time'], axis = 0)
@@ -101,7 +101,8 @@ regressor2 = DecisionTreeRegressor(random_state = 0)
 regressor2.fit(X2_train, y2_train)
 
 y2_pred = regressor2.predict(X2_test)
-r2_score(y2_test, y2_pred)
+r2 = r2_score(y2_test, y2_pred)
+r2
 
 circuit_names = circuits['name']
 circuit_names = circuit_names.values.tolist()
