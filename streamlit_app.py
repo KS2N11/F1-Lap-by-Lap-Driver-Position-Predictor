@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from sklearn.model_selection import train_test_split 
 
 st.title('🏎️ F1-Lap-by-Lap-Driver-Position-Predictor')
 
@@ -77,6 +78,7 @@ with st.expander('Prepared Data'):
 X = dataset.drop(columns = ['driver_curr_pos'], axis = 0)
 y = dataset['driver_curr_pos']
 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
 
