@@ -106,6 +106,7 @@ with st.sidebar:
   circuit = st.selectbox('Circuit Name', circuit_names)
   driver = st.selectbox('Driver Name', driver_names)
   constructor = st.selectbox('Constructor Name', constructor_names)
+  grid_pos = st.slider('Grid Position', 1, 20, 10)
 
 
 
