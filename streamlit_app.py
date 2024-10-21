@@ -95,7 +95,7 @@ driver_names = tuple(driver_names)
 
 with st.sidebar:
   st.header('**Input Features**')
-  
+  driver = st.selectbox('Driver Name', driver_names)
 
 
 
