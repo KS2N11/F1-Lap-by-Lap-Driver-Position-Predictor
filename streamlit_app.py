@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.model_selection import train_test_split 
+from sklearn.tree import DecisionTreeRegressor
 
 st.title('🏎️ F1-Lap-by-Lap-Driver-Position-Predictor')
 
@@ -80,7 +81,8 @@ y = dataset['driver_curr_pos']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-
+regressor = DecisionTreeRegressor(random_state = 0)
+regressor.fit(X_train, y_train)
 
 
 
