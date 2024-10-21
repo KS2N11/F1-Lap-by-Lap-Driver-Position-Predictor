@@ -189,20 +189,20 @@ input_data2 = pd.DataFrame(
         'raceId': [race_id],
         'driverId': [driver_id],
         'curr_lap': [current_lap],
-        'driver_curr_pos': [output]
+        'driver_curr_pos': [predicted_position]
     }
   )
 
-output2 = regressor2.predict(input_data2)
-output2 = output2[0]
+predicted_lap_time_ms = regressor2.predict(input_data2)[0]
 
-output_in_min = output2 / 60000
-minutes = output2 // 60000
-seconds = (output2 % 60000) // 1000
-milliseconds = output2 % 1000
+# Convert milliseconds to mm:ss.SSS format
+minutes = int(predicted_lap_time_ms // 60000)
+seconds = int((predicted_lap_time_ms % 60000) // 1000)
+milliseconds = int(predicted_lap_time_ms % 1000)
 
-output = int(output)
-output = str(output)
+# Display Predicted Lap Time in a Column Layout
+st.markdown("### ⏱️ **Predicted Lap Time**")
+st.write(f"**{minutes}** minutes, **{seconds}** seconds, **{milliseconds}** milliseconds")
 
-st.write('**Position of**', driver, '**from**', constructor, '**on lap**', current_lap, '**at**', circuit, '**is P**',output)
-st.write("Lap Time- ", minutes,":",seconds,".", milliseconds)
+# Highlight Final Prediction with Emoji
+st.success(f"📊 **On Lap {current_lap}, {driver} is predicted to be in position P{int(predicted_position)}.**")
