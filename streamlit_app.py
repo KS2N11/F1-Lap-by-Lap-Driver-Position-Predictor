@@ -4,6 +4,37 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import r2_score
 
+# CSS to Position the Logo at the Top-Right Corner
+st.markdown(
+    """
+    <style>
+    [data-testid="stAppViewContainer"] {
+        background-color: #0b0c10;
+    }
+    [data-testid="stHeader"] {
+        background: rgba(0, 0, 0, 0);
+    }
+    .top-right-logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 100px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Add the F1 Logo
+st.markdown(
+    """
+    <a href="https://www.formula1.com/" target="_blank">
+        <img class="top-right-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg">
+    </a>
+    """,
+    unsafe_allow_html=True,
+)
+
 st.title('🏎️ F1-Lap-by-Lap-Driver-Position-Predictor')
 st.subheader("🚥 **Predict the next position and lap time of an F1 driver in real-time.**")
 
