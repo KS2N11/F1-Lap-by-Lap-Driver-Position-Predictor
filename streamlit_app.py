@@ -174,5 +174,5 @@ milliseconds = output2 % 1000
 output = int(output)
 output = str(output)
 
-st.write('**Position of**', driver, '**from**', constructor, '**is P**',output)
+st.write('**Position of**', driver, '**from**', constructor, '**on lap**', current_lap, '**at**', circuit, '**is P**',output)
 st.write("Lap Time- ", minutes,":",seconds,".", milliseconds)
