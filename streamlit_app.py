@@ -3,22 +3,21 @@ import pandas as pd
 from sklearn.model_selection import train_test_split 
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import r2_score
-from streamlit_lottie import st_lottie
 import requests
 
 
-def load_lottie_url(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-
+# Lottie Animation using HTML
 lottie_url = "https://lottie.host/2067a16e-440f-4882-bcec-340b719802e1/CzhGueh0Z8.lottie"
-lottie_animation = load_lottie_url(lottie_url)
 
-
-st_lottie(lottie_animation, speed=1, height=300, key="f1_animation")
+# Embed Lottie animation in the center using HTML
+st.markdown(
+    f"""
+    <div style="display: flex; justify-content: center; align-items: center; height: 300px;">
+        <lottie-player src="{lottie_url}" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 # CSS to Center the Logo at the Top
 st.markdown(
