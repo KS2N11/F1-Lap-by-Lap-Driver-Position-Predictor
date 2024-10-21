@@ -3,6 +3,22 @@ import pandas as pd
 from sklearn.model_selection import train_test_split 
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import r2_score
+from streamlit_lottie import st_lottie
+import requests
+
+
+def load_lottie_url(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+
+lottie_url = "https://lottie.host/2067a16e-440f-4882-bcec-340b719802e1/CzhGueh0Z8.lottie"
+lottie_animation = load_lottie_url(lottie_url)
+
+
+st_lottie(lottie_animation, speed=1, height=300, key="f1_animation")
 
 # CSS to Center the Logo at the Top
 st.markdown(
