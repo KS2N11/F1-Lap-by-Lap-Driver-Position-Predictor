@@ -5,6 +5,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import r2_score
 
 st.title('🏎️ F1-Lap-by-Lap-Driver-Position-Predictor')
+st.subheader("🚥 **Predict the next position and lap time of an F1 driver in real-time.**")
 
 drivers = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-Driver-Position-Predictor/refs/heads/master/datasets/drivers.csv')
 driver_standings = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-Driver-Position-Predictor/refs/heads/master/datasets/driver_standings.csv')
