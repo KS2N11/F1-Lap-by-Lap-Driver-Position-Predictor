@@ -130,7 +130,7 @@ constructor_names = tuple(constructor_names)
 years = tuple(range(2024, 1949, -1))
 
 with st.sidebar:
-  st.header('**Input Features**')
+  st.header('**🏁Input Features**')
   circuit = st.selectbox('Circuit Name', circuit_names)
   year = st.selectbox('Year', years)
   driver = st.selectbox('Driver Name', driver_names)
