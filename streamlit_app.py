@@ -131,13 +131,13 @@ years = tuple(range(2024, 1949, -1))
 
 with st.sidebar:
   st.header('**🏁Input Features**')
-  circuit = st.selectbox('Circuit Name', circuit_names)
-  year = st.selectbox('Year', years)
-  driver = st.selectbox('Driver Name', driver_names)
-  constructor = st.selectbox('Constructor Name', constructor_names)
-  grid_pos = st.slider('Grid Position', 1, 20, 10)
-  final_pos = st.slider('Classification Position', 1, 20, 10)
-  current_lap = st.slider('Current Lap', 1, 60, 30)
+  circuit = st.selectbox('🏟️Circuit Name', circuit_names)
+  year = st.selectbox('📅Year', years)
+  driver = st.selectbox('👤Driver Name', driver_names)
+  constructor = st.selectbox('🚗Constructor Name', constructor_names)
+  grid_pos = st.slider('🔢Grid Position', 1, 20, 10)
+  final_pos = st.slider('🏅Classification Position', 1, 20, 10)
+  current_lap = st.slider('🔂Current Lap', 1, 60, 30)
 
   #Creating a Dataframe
   circuit_id = circuits.loc[circuits['name'] == circuit, 'circuitId'].iloc[0]
