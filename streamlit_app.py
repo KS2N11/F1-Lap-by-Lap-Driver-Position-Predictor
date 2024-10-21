@@ -70,6 +70,8 @@ finalmerge = finalmerge.drop(columns = ['curr_lap_time', 'resultId', 'constructo
 dataset = finalmerge
 dataset.dropna(subset=['driver_curr_pos'], inplace=True)
 
-dataset
+with st.expander('Prepared Data'):
+  st.write('**Final Dataset**')
+  dataset
 
 
