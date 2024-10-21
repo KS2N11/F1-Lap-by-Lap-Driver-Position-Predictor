@@ -110,7 +110,7 @@ with st.sidebar:
   driver = st.selectbox('Driver Name', driver_names)
   constructor = st.selectbox('Constructor Name', constructor_names)
   grid_pos = st.slider('Grid Position', 1, 20, 10)
-  fianl_pos = st.slider('Classification Position', 1, 20, 10)
+  final_pos = st.slider('Classification Position', 1, 20, 10)
   current_lap = st.slider('Current Lap', 1, 20, 60)
 
   #Creating a Dataframe
@@ -120,9 +120,16 @@ with st.sidebar:
   race_id = races.loc[(races['circuitId']==circuit_id), 'raceId'].iloc[0]
   round = races.loc[(races['circuitId'] == circuit_id), 'round'].iloc[0]
 
-circuit_id
-driver_id
-constructor_id
-race_id
-round
-
+  input_data = pd.DataFrame(
+    {
+        'circuitId': [circuit_id],
+        'raceId': [race_id],
+        'year': [year],        
+        'round': [round],
+        'driverId': [driver_id],
+        'driver_fin_pos': [final_pos],        
+        'constructorId': [constructor_id],
+        'curr_lap': [current_lap],
+        'driver_start_pos': [grid_pos]
+    }
+  )
