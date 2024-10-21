@@ -17,21 +17,21 @@ results = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-Dr
 
 with st.expander('Raw Data'):
   st.write('**Driver Info**')
-  drivers
+  drivers.head(1000)
   st.write('**Driver Standings**')
-  driver_standings
+  driver_standings.head(1000)
   st.write('**Constructor Info**')
-  constructors
+  constructors.head(1000)
   st.write('**Constructor Standings**')
-  constructor_standings
+  constructor_standings.head(1000)
   st.write('**Race Info**')
-  races
+  races.head(1000)
   st.write('**Circuit Info**')
-  circuits
+  circuits.head(1000)
   st.write('**Lap Times**')
-  lap_times
+  lap_times.head(1000)
   st.write('**Results**')
-  results
+  results.head(1000)
 
 
 circuits = circuits.drop(columns = ['lat', 'lng', 'alt', 'url'], axis = 0)
@@ -75,7 +75,7 @@ dataset.dropna(subset=['driver_curr_pos'], inplace=True)
 
 with st.expander('Prepared Data'):
   st.write('**Final Dataset**')
-  dataset
+  dataset.head(1000)
 
 
 #Model 1
