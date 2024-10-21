@@ -91,8 +91,6 @@ r = r2_score(y_test, y_pred)
 
 driver_names = drivers['driverRef']
 x = driver_names.values.tolist()
-t = tuple(x)
-t
 
 with st.sidebar:
   st.header('**Input Features**')
