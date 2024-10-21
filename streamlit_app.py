@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split 
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import r2_score
@@ -120,12 +119,7 @@ with st.expander('✅Prepared Data'):
   st.write('**Final Dataset**')
   d9 = dataset.head(1000)
   d9
-
-with st.expander('👀Data Visualizations'):
-    # 1. Bar Chart - Number of Circuits per Country
-    st.subheader('📊 Number of Circuits per Country')
     
-
 
 #Model 1
 X = dataset.drop(columns = ['driver_curr_pos'], axis = 0)
