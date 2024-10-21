@@ -161,10 +161,28 @@ with st.sidebar:
   )
 
 if(current_lap == 60):
-  output = final_pos
+  predicted_position = final_pos
 else:
-  output = regressor.predict(input_data1)
-  output = output[0]
+  predicted_position = regressor.predict(input_data1)
+  predicted_position = predicted_position[0]
+
+# Progress Bar for Lap Completion
+progress = current_lap / 60
+st.progress(progress)
+
+# Display Output with Metrics
+st.markdown("## 🏁 **Race Prediction Summary**")
+col1, col2 = st.columns(2)
+
+with col1:
+    st.metric("Current Lap", f"{current_lap}/60", delta=f"{60 - current_lap} remaining")
+    st.metric("Grid Position", grid_pos)
+    st.metric("Predicted Position", int(predicted_position))
+
+with col2:
+    st.markdown(f"**Circuit**: {circuit}")
+    st.markdown(f"**Driver**: {driver} ({constructor})")
+    st.markdown(f"**Year**: {year}")
 
 input_data2 = pd.DataFrame(
     {
