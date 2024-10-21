@@ -120,3 +120,9 @@ with st.sidebar:
   race_id = races.loc[(races['circuitId']==circuit_id), 'raceId'].iloc[0]
   round = races.loc[(races['circuitId'] == circuit_id), 'round'].iloc[0]
 
+circuit_id
+driver_id
+constructor_id
+race_id
+round
+
