@@ -138,4 +138,6 @@ with st.sidebar:
 input_data
 output = regressor.predict(input_data)
 output = output[0]
+output = int(output)
+output = str(output)
 st.write('**Position of**', driver, '**from**', constructor, '**is P**',output)
