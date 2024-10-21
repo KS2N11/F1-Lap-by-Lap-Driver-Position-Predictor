@@ -89,6 +89,8 @@ y_pred = regressor.predict(X_test)
 
 r = r2_score(y_test, y_pred)
 
+with st.sidebar:
+  st.header('**Input Features**')
 
 
 
