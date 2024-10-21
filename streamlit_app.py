@@ -137,4 +137,4 @@ with st.sidebar:
 
 input_data
 output = regressor.predict(input_data)
-output[0]
+st.info(output[0])
