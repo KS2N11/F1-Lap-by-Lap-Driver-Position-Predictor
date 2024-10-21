@@ -165,7 +165,16 @@ input_data2 = pd.DataFrame(
   )
 input_data2
 
+output2 = regressor2.predict(input_data2)
+output2 = output2[0]
+
+output_in_min = output2 / 60000
+minutes = output2 // 60000
+seconds = (output2 % 60000) // 1000
+milliseconds = output2 % 1000
+
 output = int(output)
 output = str(output)
 
 st.write('**Position of**', driver, '**from**', constructor, '**is P**',output)
+print("Lap Time- ", minutes,":",seconds,".", milliseconds)
