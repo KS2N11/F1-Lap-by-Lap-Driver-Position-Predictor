@@ -89,6 +89,10 @@ y_pred = regressor.predict(X_test)
 
 r = r2_score(y_test, y_pred)
 
+circuit_names = circuits['name']
+circuit_names = circuit_names.values.tolist()
+circuit_names = tuple(circuit_names)
+
 driver_names = drivers['driverRef']
 driver_names = driver_names.values.tolist()
 driver_names = tuple(driver_names)
