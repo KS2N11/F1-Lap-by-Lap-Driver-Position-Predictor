@@ -74,4 +74,15 @@ with st.expander('Prepared Data'):
   st.write('**Final Dataset**')
   dataset
 
+X = dataset.drop(columns = ['driver_curr_pos'], axis = 0)
+y = dataset['driver_curr_pos']
+
+
+
+
+
+
+
+
+
 
