@@ -93,6 +93,10 @@ driver_names = drivers['driverRef']
 driver_names = driver_names.values.tolist()
 driver_names = tuple(driver_names)
 
+constructor_names = constructors['constructorRef']
+constructor_names = constructor_names.values.tolist()
+constructor_names = tuple(constructor_names)
+
 with st.sidebar:
   st.header('**Input Features**')
   driver = st.selectbox('Driver Name', driver_names)
