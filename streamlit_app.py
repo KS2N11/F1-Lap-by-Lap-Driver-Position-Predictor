@@ -13,4 +13,5 @@ lap_times = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-
 results = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-Driver-Position-Predictor/refs/heads/master/datasets/results.csv')
 
 with st.expander('Raw Data'):
+  st.write('**Driver Info**')
   drivers
