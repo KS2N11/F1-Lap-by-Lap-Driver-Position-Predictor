@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split 
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import r2_score
@@ -124,13 +124,7 @@ with st.expander('✅Prepared Data'):
 with st.expander('👀Data Visualizations'):
     # 1. Bar Chart - Number of Circuits per Country
     st.subheader('📊 Number of Circuits per Country')
-    circuits_per_country = circuits['country'].value_counts()
-    fig, ax = plt.subplots()
-    circuits_per_country.plot(kind='bar', ax=ax, color='skyblue')
-    ax.set_xlabel('Country')
-    ax.set_ylabel('Number of Circuits')
-    ax.set_title('Circuits per Country')
-    st.pyplot(fig)
+    
 
 
 #Model 1
