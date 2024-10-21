@@ -77,6 +77,8 @@ with st.expander('Prepared Data'):
   st.write('**Final Dataset**')
   dataset
 
+
+#Model 1
 X = dataset.drop(columns = ['driver_curr_pos'], axis = 0)
 y = dataset['driver_curr_pos']
 
@@ -88,6 +90,18 @@ regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_test)
 
 r = r2_score(y_test, y_pred)
+
+#Model 2
+X2 = lap_times.drop(columns = ['milliseconds', 'curr_lap_time'], axis = 0)
+y2 = lap_times['milliseconds']
+
+X2_train, X2_test, y2_train, y2_test = train_test_split(X2, y2, test_size=0.2, random_state=42)
+
+regressor2 = DecisionTreeRegressor(random_state = 0)
+regressor2.fit(X2_train, y2_train)
+
+y2_pred = regressor2.predict(X2_test)
+r2_score(y2_test, y2_pred)
 
 circuit_names = circuits['name']
 circuit_names = circuit_names.values.tolist()
