@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import r2_score
 
-# CSS to Position the Logo at the Top-Right Corner
+# CSS to Position the Logo at the Top-Left Corner
 st.markdown(
     """
     <style>
@@ -14,10 +14,10 @@ st.markdown(
     [data-testid="stHeader"] {
         background: rgba(0, 0, 0, 0);
     }
-    .top-right-logo {
+    .top-left-logo {
         position: absolute;
         top: 10px;
-        right: 10px;
+        left: 10px;
         width: 100px;
     }
     </style>
@@ -29,7 +29,7 @@ st.markdown(
 st.markdown(
     """
     <a href="https://www.formula1.com/" target="_blank">
-        <img class="top-right-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg">
+        <img class="top-left-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg">
     </a>
     """,
     unsafe_allow_html=True,
