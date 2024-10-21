@@ -127,7 +127,7 @@ with st.sidebar:
   constructor = st.selectbox('Constructor Name', constructor_names)
   grid_pos = st.slider('Grid Position', 1, 20, 10)
   final_pos = st.slider('Classification Position', 1, 20, 10)
-  current_lap = st.slider('Current Lap', 1, 20, 60)
+  current_lap = st.slider('Current Lap', 1, 60, 30)
 
   #Creating a Dataframe
   circuit_id = circuits.loc[circuits['name'] == circuit, 'circuitId'].iloc[0]
@@ -150,7 +150,7 @@ with st.sidebar:
     }
   )
 
-if(cuurent_lap == 60):
+if(current_lap == 60):
   output = final_pos
 else:
   output = regressor.predict(input_data1)
