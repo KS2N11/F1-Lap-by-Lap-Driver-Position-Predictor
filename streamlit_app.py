@@ -122,7 +122,7 @@ with st.expander('✅Prepared Data'):
 
 with st.expander('👀Data Visualizations'):
     # 1. Bar Chart - Number of Circuits per Country
-    st.header('📊 Number of Circuits per Country')
+    st.subheader('📊 Number of Circuits per Country')
 
 
 #Model 1
