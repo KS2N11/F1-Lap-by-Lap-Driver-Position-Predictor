@@ -90,10 +90,12 @@ y_pred = regressor.predict(X_test)
 r = r2_score(y_test, y_pred)
 
 driver_names = drivers['driverRef']
-driver_names
+x = driver_names.tolist()
+x
 
 with st.sidebar:
   st.header('**Input Features**')
+  
 
 
 
