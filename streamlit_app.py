@@ -107,8 +107,8 @@ with st.sidebar:
   driver = st.selectbox('Driver Name', driver_names)
   constructor = st.selectbox('Constructor Name', constructor_names)
   grid_pos = st.slider('Grid Position', 1, 20, 10)
-
-
+  fianl_pos = st.slider('Classification Position', 1, 20, 10)
+  current_lap = st.slider('Current Lap', 1, 20, 60)
 
 
 
