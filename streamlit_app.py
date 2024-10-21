@@ -114,6 +114,6 @@ with st.sidebar:
   current_lap = st.slider('Current Lap', 1, 20, 60)
 
   #Creating a Dataframe
-  
+  circuit_id = circuits.loc[circuits['name'] == circuit, 'circuitId'].iloc[0]
 
 
