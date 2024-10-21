@@ -49,7 +49,7 @@ circuits = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-D
 lap_times = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-Driver-Position-Predictor/refs/heads/master/datasets/lap_times.csv')
 results = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-Driver-Position-Predictor/refs/heads/master/datasets/results.csv')
 
-with st.expander('Raw Data'):
+with st.expander('📝Raw Data'):
   st.write('**Driver Info**')
   d1 = drivers.head(1000)
   d1
@@ -115,7 +115,7 @@ finalmerge = finalmerge.drop(columns = ['curr_lap_time', 'resultId', 'constructo
 dataset = finalmerge
 dataset.dropna(subset=['driver_curr_pos'], inplace=True)
 
-with st.expander('Prepared Data'):
+with st.expander('✅Prepared Data'):
   st.write('**Final Dataset**')
   d9 = dataset.head(1000)
   d9
