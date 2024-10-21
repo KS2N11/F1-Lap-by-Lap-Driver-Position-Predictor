@@ -15,3 +15,17 @@ results = pd.read_csv('https://raw.githubusercontent.com/KS2N11/F1-Lap-by-Lap-Dr
 with st.expander('Raw Data'):
   st.write('**Driver Info**')
   drivers
+  st.write('**Driver Standings**')
+  driver_standings
+  st.write('**Constructor Info**')
+  constructors
+  st.write('**Constructor Standings**')
+  constructor_standings
+  st.write('**Race Info**')
+  races
+  st.write('**Circuit Info**')
+  circuits
+  st.write('**Lap Times**')
+  lap_times
+  st.write('**Results**')
+  results
